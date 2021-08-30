@@ -1,0 +1,49 @@
+ALGORITHM checkpoint
+VAR
+    str: STRING[20];
+    i: INTEGER;
+    len: INTEGER;
+    words: INTEGER;
+    vowels: INTEGER;
+BEGIN
+    REPEAT
+        Write("give a sentance");
+        Read(str);
+    UNTIL (str[str.length] = ".")
+    
+    
+    
+    len:=0;
+    FOR i FROM 0 TO str.length STEP 1  DO
+    
+        IF (str[i]=" ") THEN
+            len:=len;
+        ELSE
+            len:=len + 1;
+        END_IF
+       
+    END_FOR
+
+
+    words:=1;
+    FOR i FROM 0 TO str.length STEP 1  DO
+        IF (str[i]=" ") THEN
+            
+            words:= words + 1;
+        END_IF
+    END_FOR
+
+    
+    vowels:=0;
+    FOR i FROM 0 TO str.length STEP 1  DO
+        IF (str[i]=["a","e","i","o","u","y"]) THEN
+            
+            vowels:=vowels + 1;
+        END_IF
+    END_FOR
+
+    Write(len);
+    Write(words);
+    Write(vowels);
+
+END
